@@ -296,6 +296,7 @@
   flex-direction: column;
   align-items: center;
   background-color: #FFFFFF;
+  
 }
 
 #prices h2 {
@@ -312,6 +313,7 @@
   flex-direction: row;
   justify-content: space-between;
   text-align: center;
+  
 }
 
 .option-header h3 {
@@ -355,12 +357,14 @@
 
 .basic-price-option {
   margin-top: 1%;
+  margin-right: 3%;
   top: 80%;
   height: 461px;
   width: 280px;
   border-radius: 18px;
   border: 1px solid #FB3B64;
   box-shadow: 5px 10px 27px rgba(7, 172, 230, 0.29);
+  
 }
 
 .basic-price-option h2 {
@@ -382,6 +386,7 @@
 
 .pro-price-option {
   margin-top: 1%;
+  margin-right: 3%;
   height: 461px;
   width: 300px;
   border-radius: 18px;
