@@ -142,7 +142,7 @@
 .shop-buttom:hover {
   padding: -150%;
   cursor: pointer;
-  opacity: 0.7;
+  opacity: 0.75;
 }
 
 .img-fluid{
@@ -289,7 +289,6 @@
 
 /*Pricing*/
 
-
 #prices {
   padding-top: 0;
   display: flex;
@@ -344,6 +343,10 @@
   margin:  5% 15% 10% 15%;
 }
 
+.option-services p{
+  padding-top: 10%;
+}
+
 .option-button {
   width: 150px;
   height: 50px;
@@ -355,9 +358,17 @@
   border-width: 0;
 }
 
+.option-button:hover{
+  cursor: pointer;
+  opacity: 0.8;
+}
+
+
 .basic-price-option {
   margin-top: 1%;
   margin-right: 3%;
+  margin-left: 5%;
+  padding-bottom: 5%;
   top: 80%;
   height: 461px;
   width: 280px;
@@ -392,6 +403,8 @@
   border-radius: 18px;
   border: 1px solid #07ACE6;
   box-shadow: 5px 10px 27px rgba(7, 172, 230, 0.29);
+  padding-bottom: 5%;
+
 }
 
 .pro-price-option h2 {
@@ -409,6 +422,8 @@
   width: 300px;
   border-radius: 18px;
   border: 1px solid #55DFB4;
+  padding-bottom: 5%;
+
 }
 
 .premium-price-option h2 {
@@ -543,6 +558,11 @@
   border: 0;
   margin-right: 30%;
   margin-top: 1%;
+}
+
+.form button:hover{
+  cursor: pointer;
+  opacity: 0.75;
 }
 
 .check {
