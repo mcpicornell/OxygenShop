@@ -1,4 +1,4 @@
-
+/* //box-sizing: border-box; */
   @import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&family=Raleway:wght@300;400&display=swap");
   :root {
     --blue-color: #08A6E4;
@@ -22,7 +22,6 @@
   }
   
   /* RESPONSIVE PARA PC */
-@media screen and (min-width: 1248px)  {
 
 
   *{
@@ -72,7 +71,7 @@
     z-index: 2;
   }
 
-  .navigation {
+  .nav {
     margin-right: 3%;
     z-index: 2;
   }
@@ -93,9 +92,14 @@
     z-index: 2;
   }
 
-  /*Header*/
+  .burger {
+    font-size: 1.2em;
+    display: none;
+}
 
-  .header{
+  /*top*/
+
+  .top{
     display: flex;
     flex-direction: column;
   }
@@ -146,7 +150,7 @@
     font-style: normal;
     font-size: 1.8rem;
     line-height: 200%;
-    width: 35%;
+    width: 60%;
     height: 12%;
     color: #FFFFFF;
     background-color: #08A6E4;
@@ -682,11 +686,6 @@
     margin-right: 800%;
 
   }
-
-
-}
-
-
  
 
 
@@ -721,9 +720,8 @@
     width: 100%;
     z-index: 5;
     position: fixed;
-    background-color:white;
+    /* background-color:white; */
     border-bottom: 3px inset rgb(241, 240, 240);
-    display: flex;
     justify-content: space-between;
     align-items: center;
     color: grey;
@@ -732,21 +730,44 @@
 
   .logo{
     display: inline-flex;
-    flex-direction: row;
+    
     height: 20px;
     margin-left: 15px;
   }
 
-  .navigation {
+  .nav {
+    margin-top: 5%;
     margin-right: 3%;
+    position: absolute;
+    right: -100%;
+    top: 70px;
+    /* Lo vamos a poner a mitad de la pantalla y separado del top de la
+    pantalla */
+    /* width: 50%; */
+    height: calc(100% - 70px);
+    /* Vamos a  poner distancia entre los elementos */
+    display: flex !important;
+    flex-direction: column !important;
+    justify-content: space-around !important;
+    
+    
+
   }
+
+
 
   .navigation-li {
     list-style: none;
-    display: inline-flex;
-    padding-right: 50px;
     font-size: 12px;
+    margin: 5%;
+    justify-items: space-around !important;
   }
+  .nav-active {
+    right: 0;
+    background-color: yellow !important; 
+
+    z-index: 3;
+}
 
   .navigation-li a{
     color: #08A6E4;
@@ -755,9 +776,15 @@
     font-size: 17px;
   }
 
-  /*Header*/
+  .burger{
+    display: block;
+    color: #08A6E4;
+    margin-right: 5%;
+}
 
-  .header{
+  /*top*/
+
+  .top{
     display: flex;
     flex-direction: column;
   }
@@ -992,7 +1019,8 @@
 
   /*Pricing*/
 
-  #prices {
+
+  section#prices {
     padding-top: 0;
     display: flex;
     flex-direction: column;
@@ -1015,6 +1043,7 @@
     display: flex;
     flex-direction: column;
     text-align: center;
+    justify-content: center;
     
   }
 
