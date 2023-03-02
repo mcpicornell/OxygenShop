@@ -21,6 +21,10 @@
     --font-family-title: "Raleway";
   }
   
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Skranji:wght@400;700&display=swap");
+
+
   /* RESPONSIVE PARA PC */
 
 
@@ -40,31 +44,27 @@
 
     }
 
-    .check-btn{
-      font-size: 30px;
-      color: var(--blue-color);
+
+    #header{
+      height: 12%;
+      width: 100%;
+      z-index: 5;
+      position: fixed;
+      background-color:white;
+      border-bottom: 3px inset rgb(241, 240, 240);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      color: grey;
+      box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.29);
+      box-sizing: border-box;
 
     }
 
+  
 
 
-
-  .shop {
-    height: 12%;
-    width: 100%;
-    z-index: 5;
-    position: fixed;
-    background-color:white;
-    border-bottom: 3px inset rgb(241, 240, 240);
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    color: grey;
-    box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.29);
-  }
-
-  .logo{
-    display: inline-flex;
+  img.logo{
     flex-direction: row;
     height: 25px;
     margin-left: 45px;
@@ -73,7 +73,9 @@
 
   .nav {
     margin-right: 3%;
+
     z-index: 2;
+    
   }
 
   .navigation-li {
@@ -82,11 +84,13 @@
     padding-right: 50px;
     font-size: 12px;
     z-index: 2;
+    box-sizing: border-box;
+
   }
 
   .navigation-li a{
     color: #08A6E4;
-    font-family: "Comic Sans";
+    font-family: "Open Sans";
     font-style: solid;
     font-size: 17px;
     z-index: 2;
@@ -338,12 +342,14 @@
 
   #pricing-options {
     padding-top: 2%;
-    padding-bottom: 10%;
+    /* padding-bottom: 10%; */
+    margin-bottom: 10%;
     width: 70%;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     text-align: center;
+    
     
   }
 
@@ -376,40 +382,41 @@
   }
 
    .option-services {
-    padding: 5% 15% 10% 15%;
-    margin:  5% 15% 10% 15%;
+    margin:  10%;
+    position: relative;
   } 
-
-  div.option-services{
-
-    padding: 5% 15% 10% 15%;
-    margin:  5% 15% 10% 15%;
-  }
 
   .option-services p{
     padding-top: 10%;
+    width: 100%;
   }
 
   button.option-button {
-    margin-top: 110%;
-    margin-left: -10px;
-    width: 130%;
-    height: 40px;
+    width: 47%;
+    height: 8%;
+    margin-top: 50%;
+    margin-bottom: 2%;
     border-radius: 80px;
     color: #FFFFFF;
     font-family: "Open Sans";
     font-weight: 600;
     font-size: 13px;
     border-width: 0;
+    position: absolute;
+    bottom: -5%;
+    right: 25%;
+    
   }
 
   .option-button:hover{
     cursor: pointer;
     opacity: 0.8;
+    
   }
 
 
-  .basic-price-option { 
+  .basic-price-option {
+    position: relative; 
     margin-top: 1%;
     margin-right: 3%;
     height: 461px;
@@ -418,27 +425,37 @@
     border: 1px solid #FB3B64;
     box-shadow: 5px 10px 27px rgba(7, 172, 230, 0.29);
     padding-bottom: 0;
-
+    box-sizing: border-box;
+    margin-bottom: -1%;
+  
+    
   }
 
   .basic-price-option h2 {
+    margin-top: 14.5px;
     color: #FB3B64;
   }
 
   .basic-price-option button {
+
     background-color: #FB3B64;
+    
+    
   }
 
   .pro-price-option {
+    position: relative;
     margin-top: 1%;
     margin-right: 3%;
-
     height: 461px;
     width: 300px;
     border-radius: 18px;
     border: 1px solid #07ACE6;
+    box-shadow: 5px 10px 27px rgba(7, 172, 230, 0.29);
     padding-bottom: 0;
-
+    word-wrap: break-word ;
+    
+    
 
   }
 
@@ -448,16 +465,20 @@
 
   .pro-price-option button {
     background-color: #07ACE6;
+    
 
   }
 
   .premium-price-option {
+    position: relative;
     margin-top: 1%;
     height: 461px;
     width: 300px;
     border-radius: 18px;
     border: 1px solid #55DFB4;
+    box-shadow: 5px 10px 27px rgba(7, 172, 230, 0.29);
     padding-bottom: 0;
+    box-sizing: border-box;
 
   }
 
@@ -528,31 +549,35 @@
   /*Form*/
 
   #contact {
+    
     padding-top: 10%;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: flex-start;
+   
     background-color: #FFFFFF;
   }
 
   .contact {
-    width: 50%;
     text-align: center;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-left: 5%;
   }
 
-  .contact h2 {
-    font-family: "Raleway";
-    font-size: 49px;
-    font-weight: 400;
-  }
-
-  .contact p {
+  .questions  {
     padding-top: 3%;
     font-family: "Open Sans";
     font-size: 16px;
     font-weight: 400;
   }
+
+  .questions h2 {
+    font-family: "Raleway";
+    font-size: 49px;
+    font-weight: 400;
+  }
+
+  
 
   .info-icons {
     padding-top: 3%;
@@ -560,7 +585,7 @@
     justify-content: center;
   }
 
-  .info-icons p {
+  .info-icons span {
     font-family: "Open Sans";
     font-size: 16px;
     font-weight: 600;
@@ -570,7 +595,7 @@
 
   .form {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     width: 50%;
     font-family: "Open Sans";
     font-size: 11px;
@@ -615,6 +640,10 @@
     width: 90%;
   }
 
+  .check-text{
+    padding-right: 100px;
+    }
+
   .tick {
     padding-top: 1%;
     padding-right: 2%;
@@ -624,7 +653,8 @@
     border: none;
     border-bottom: 1px solid #95989A;
     width: 70%;
-    margin-right: 40%;
+    margin-left: -32%;
+
 
   }
 
@@ -632,7 +662,8 @@
     border: none;
     border-bottom: 1px solid #95989A;
     width: 70%;
-    margin-right: 40%;
+    margin-left: -32%;
+
   }
 
   input[type=checkbox] {
@@ -644,9 +675,7 @@
     margin-right: 100%;
   }
 
-  .check-text{
-  padding-right: 100px;
-  }
+
 
   /*Footer*/
 
@@ -670,15 +699,15 @@
     font-size: 26px;
     font-weight: 300;
     color: #08A6E4;
-    margin-left: -200%;
+    margin-left: -150%;
   }
 
-  .footer-logo p {
+  .footer-logo span {
     font-family: "Open Sans";
     font-size: 11px;
     font-weight: 400;
     color: #A5A5A5;
-    margin-left: -200%;
+    margin-left: -150%;
 
   }
 
@@ -698,7 +727,7 @@
 /* RESPONSIVE PARA MOVIL */
 
 
-@media screen and (max-width: 1223px)  {
+@media screen and (max-width: 1000px)  {
 
   *{
     margin-left: 0;
@@ -715,59 +744,57 @@
 
     }
 
-  .shop {
+
+  .header{
+    justify-content: space-between;
+    align-items: center;
+  }
+
+
+  #header {
     height: 50px;
     width: 100%;
     z-index: 5;
     position: fixed;
-    /* background-color:white; */
+    
     border-bottom: 3px inset rgb(241, 240, 240);
-    justify-content: space-between;
-    align-items: center;
     color: grey;
     box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.29);
+    
   }
 
-  .logo{
-    display: inline-flex;
+  img.logo{
     
     height: 20px;
-    margin-left: 15px;
+    margin-left: 25px;
   }
 
+
+
   .nav {
+    display: flex;
     margin-top: 5%;
     margin-right: 3%;
     position: absolute;
     right: -100%;
-    top: 70px;
-    /* Lo vamos a poner a mitad de la pantalla y separado del top de la
-    pantalla */
-    /* width: 50%; */
-    height: calc(100% - 70px);
-    /* Vamos a  poner distancia entre los elementos */
-    display: flex !important;
-    flex-direction: column !important;
-    justify-content: space-around !important;
-    
-    
-
+    top: 10%;
+    width: 30%;
+    flex-direction: column;
+    background-color: white;
+    border-radius: 5%;
+    border: 2px inset #95989A;
+  
   }
-
-
 
   .navigation-li {
     list-style: none;
     font-size: 12px;
-    margin: 5%;
-    justify-items: space-around !important;
+    padding: 10%;
+    
   }
   .nav-active {
     right: 0;
-    background-color: yellow !important; 
-
-    z-index: 3;
-}
+  }
 
   .navigation-li a{
     color: #08A6E4;
@@ -1022,10 +1049,7 @@
 
   section#prices {
     padding-top: 0;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    
     background-color: #FFFFFF;
     
   }
@@ -1036,11 +1060,16 @@
     font-size: 36px;
   }
 
+  div#pricing-options {
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+  }
+
   #pricing-options {
     padding-top: 2%;
     padding-bottom: 10%;
-    width: 70%;
-    display: flex;
+    
     flex-direction: column;
     text-align: center;
     justify-content: center;
@@ -1094,7 +1123,7 @@
   button.option-button {
     margin-top: 20%;
     margin-left: -10px;
-    width: 130%;
+    width: 80;
     height: 40px;
     border-radius: 80px;
     color: #FFFFFF;
@@ -1102,6 +1131,7 @@
     font-weight: 600;
     font-size: 13px;
     border-width: 0;
+    position: absolute;
   }
 
   .option-button:hover{
@@ -1112,14 +1142,13 @@
 
   .basic-price-option { 
     margin-top: 1%;
-    margin-left: -25px;
+   
     margin-bottom: 30px;
-    width: 300px;
+    width: 100%;
     border-radius: 18px;
     border: 1px solid #FB3B64;
     box-shadow: 5px 10px 27px rgba(7, 172, 230, 0.29);
     padding-bottom: 10px;
-
   }
 
   .basic-price-option h2 {
@@ -1133,10 +1162,10 @@
   .pro-price-option {
     margin-top: 10px;
     margin-right: 3%;
-    margin-left: -25px;
+    
     margin-bottom: 40px;
     padding-bottom: 10px;
-    width: 300px;
+    width: 100%;
     border-radius: 18px;
     border: 1px solid #07ACE6;
     padding-bottom: 0;
@@ -1155,10 +1184,10 @@
 
   .premium-price-option {
     margin-top: 10px;
-    margin-left: -25px;
+    
     margin-bottom: 30px;
     padding-bottom: 10px;
-    width: 300px;
+    width: 100%;    
     border-radius: 18px;
     border: 1px solid #55DFB4;
     padding-bottom: 0;
@@ -1234,17 +1263,21 @@
 
   /*Form*/
 
-  #contact {
+  .contact {
     padding-top: 10%;
     margin-left: 10%;
-   
-    justify-content: space-around;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    
     background-color: #FFFFFF;
   }
 
-  .contact {
+  .questions {
     width: 80%;
-    text-align: center;
+    
+
   }
 
   .contact h2 {
@@ -1254,7 +1287,7 @@
     margin-right: -25px;
   }
 
-  .contact p {
+  .contact span {
     padding-top: 3%;
     font-family: "Open Sans";
     font-size: 16px;
@@ -1263,10 +1296,12 @@
 
   .info-icons {
     padding-top: 3%;
-    justify-content: center;
+    
+    
+    
     }
 
-  .info-icons p {
+  .info-icons span {
     font-family: "Open Sans";
     font-size: 16px;
     font-weight: 600;
@@ -1275,15 +1310,17 @@
   }
 
   .form {
-    display: flex;
-    flex-direction: column;
+    
+    position: relative;
     width: 100%;
+    margin-top: 5%;
     font-family: "Open Sans";
     font-size: 11px;
     font-weight: 600;
     letter-spacing: 3.28px;
     color: #08A6E4;
     padding-bottom: 10%;
+    justify-content: center;
   }
 
 
@@ -1314,7 +1351,7 @@
     padding-top: 5%;
     margin-right: 10%;
     margin-bottom: 5%;
-    display: flex;
+    
     flex-direction: row;
     font-size: 12px;
     font-weight: 400;
@@ -1332,7 +1369,7 @@
     border: none;
     border-bottom: 1px solid #95989A;
     width: 80%;
-    margin-right: 40%;
+    margin-right: -10%;
 
   }
 
@@ -1340,7 +1377,7 @@
     border: none;
     border-bottom: 1px solid #95989A;
     width: 80%;
-    margin-right: 40%;
+    margin-right: -10%;
   }
 
   input[type=checkbox] {
@@ -1362,8 +1399,6 @@
   .footer {
     display: flex;
     flex-direction: row;
-    justify-content: center;
-    align-items: center;
     height: 89px;
     width: 100%;
     left: 0px;
@@ -1379,15 +1414,17 @@
     font-size: 26px;
     font-weight: 300;
     color: #08A6E4;
-    margin-left: -100px;
+    right: 50%;
+    margin-left: -20%;
   }
 
-  .footer-logo p {
+  .footer-logo span {
     font-family: "Open Sans";
     font-size: 11px;
     font-weight: 400;
     color: #A5A5A5;
     margin-left: -100px;
+    margin-left: -20%;
 
   }
 

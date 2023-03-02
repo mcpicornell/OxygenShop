@@ -13,27 +13,22 @@
     </head>
 
     <body>
-        <header>
+        <header id="header" class="header">
             
         <!--Navigation bar -->
-            <nav class="shop">
 
-                <div class="logo">
-                    <a href="#header"><img class="logo" src="img/logo.svg" alt="Logo OXYGEN SHOP"/></a>
-                </div>
-                
-                <div class="nav-container">
-                <ul class="nav">
-                    <li class="navigation-li"><a href = "#popular-sales">WHY US</a></li>
-                    <li class="navigation-li"><a href = "#benefits">BENEFITS</a></li>
-                    <li class="navigation-li"><a href="#prices">PRICES</a></li>
-                    <li class="navigation-li"><a href="#contact">CONTACT</a></li>
-                </ul>
-                </div>
-                <div class="burger">
-                    <i class="fas fa-bars"></i>
-                </div>
+        <a href="#header"><img class="logo" src="img/logo.svg" alt="Logo OXYGEN SHOP"/></a>
+            <nav class="nav">
+
+                <li class="navigation-li"><a href = "#popular-sales">WHY US</a></li>
+                <li class="navigation-li"><a href = "#benefits">BENEFITS</a></li>
+                <li class="navigation-li"><a href="#prices">PRICES</a></li>
+                <li class="navigation-li"><a href="#contact">CONTACT</a></li>
             </nav>
+
+            <div class="burger">
+                <i class="fas fa-bars"></i>
+            </div>
         </header>
 
     
@@ -127,6 +122,7 @@
                         <h3>Basic</h3>
                         <h2 id="price-basic-price-option">$0</h2>
                         
+                        
                     </div>
 
                     <div class="option-services">
@@ -135,9 +131,9 @@
                         <p><img src="img/check.svg"/>   2 E-mails</p>
                         <p><img src="img/cross.svg"/>   Two years license</p>
                         <p><img src="img/cross.svg"/>   Full support</p>
-                        <button class="option-button">Begin</button>
+                        
                     </div>
-
+                    <button class="option-button">Begin</button>
                     
                 </div>
 
@@ -154,9 +150,9 @@
                         <p><img src="img/check.svg"/>   5 E-mails</p>
                         <p><img src="img/check.svg"/>   One years license</p>
                         <p><img src="img/cross.svg"/>   Full support</p>
-                        <button class="option-button">Begin</button>
+                       
                     </div>
-                    
+                    <button class="option-button">Begin</button>
                 </div>
                     
                 <div class="premium-price-option">
@@ -171,9 +167,9 @@
                         <p><img src="img/check.svg">   20 E-mails</p>
                         <p><img src="img/check.svg">   Two years license</p>
                         <p><img src="img/check.svg">   Full support</p>
-                        <button class="option-button">Begin</button>
+                        
                     </div>
-                    
+                    <button class="option-button">Begin</button>
                 </div>
             </div>
 
@@ -208,13 +204,13 @@
         </section>
 
         <!--Form-->
-        <section  id="contact">
-            <div class="contact">
+        <section  id="contact" class="contact">
+            <div class="questions">
                 <h2>Any questions?</h2>
-                <p>Leave your email or call us!</p>
+                <span>Leave your email or call us!</span>
                 <div class="info-icons">
-                    <img src="img/mail.svg" width="20" height="20" alt=""/><p>info@bestshop.xyz</p>
-                    <img src="img/phone.svg" width="20" height="20" alt=""/><p>123 456 789</p>
+                    <img src="img/mail.svg" width="20" height="20" alt=""/><span>info@bestshop.xyz</span>
+                    <img src="img/phone.svg" width="20" height="20" alt=""/><span>123 456 789</span>
                 </div>
             </div>
 
@@ -226,8 +222,13 @@
                     <input id="email" name="email" type="email">
 
                     <div class="check">
-                        <div class="tick"><input id="consent" name="consent" type="checkbox"></div>
-                        <div class="check-text"><label for="consent"><p >I hereby give consent for my personal data included in my application to be processed for the purposes of the recruitment process under the European Parliament’s and Council of the European Union Regulation on the Protection of Natural Persons as of 27 April 2016, with regard to the processing of personal data and on the free movement of such data, and repealing Directive 95/46/EC (Data Protection Directive)</p></label>
+                        <div class="tick">
+                            <input id="consent" name="consent" type="checkbox">
+                        </div>
+                        <div class="check-text">
+                            <label for="consent">
+                                <span>I hereby give consent for my personal data included in my application to be processed for the purposes of the recruitment process under the European Parliament’s and Council of the European Union Regulation on the Protection of Natural Persons as of 27 April 2016, with regard to the processing of personal data and on the free movement of such data, and repealing Directive 95/46/EC (Data Protection Directive)</span>
+                            </label>
                         </div>
                     </div>
                     <button class="btn-form">Send</button>
@@ -239,7 +240,7 @@
         <footer class="footer">
             <div class="footer-logo">
                 <h2>OXYGEN Shop</h2>
-                <p>© 2022 OXYGEN, All Rights Reserved</p>
+                <span>© 2022 OXYGEN, All Rights Reserved</span>
             </div>
            
             <div class="social-media">
