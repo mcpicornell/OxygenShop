@@ -89,11 +89,14 @@
   }
 
   .navigation-li a{
-    color: #08A6E4;
+    color: #A5A5A5;
     font-family: "Open Sans";
     font-style: solid;
     font-size: 17px;
     z-index: 2;
+    font-weight: 700;
+    text-decoration: none;
+    font-size: 0.8rem;
   }
 
   .burger {
@@ -824,23 +827,23 @@
 
   .nav {
     display: flex;
-    margin-top: 5%;
-    margin-right: 3%;
+    margin-top: 10%;
+    margin-right: 0%;
     position: absolute;
-    right: -100%;
+    right: -120%;
     top: 10%;
-    width: 30%;
+    width: 100%;
     flex-direction: column;
     background-color: white;
-    border-radius: 5%;
-    border: 2px inset #95989A;
+    /* border-radius: 5%;
+    border: 2px inset #95989A; */
   
   }
 
   .navigation-li {
     list-style: none;
     font-size: 12px;
-    padding: 10%;
+    padding: 3%;
     
   }
   .nav-active {
@@ -848,10 +851,12 @@
   }
 
   .navigation-li a{
-    color: #08A6E4;
+    color: black;
     font-family: "Comic Sans";
     font-style: solid;
-    font-size: 17px;
+    font-size: 13px;
+    font-weight: 700;
+    text-decoration: none;
   }
 
   .burger{
