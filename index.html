@@ -18,22 +18,34 @@
         <!--Navigation bar -->
 
         <a href="#header"><img class="logo" src="img/logo.svg" alt="Logo OXYGEN SHOP"/></a>
-            <nav class="nav">
+            <div class="nav">
 
                 <li class="navigation-li"><a href = "#popular-sales">WHY US</a></li>
                 <li class="navigation-li"><a href = "#benefits">BENEFITS</a></li>
                 <li class="navigation-li"><a href="#prices">PRICES</a></li>
                 <li class="navigation-li"><a href="#contact">CONTACT</a></li>
-            </nav>
+            </div>
 
             <div class="burger">
                 <i class="fas fa-bars"></i>
             </div>
+
+            <!-- <div class="progress_wrapper">
+
+                <div class="progress_bar">
+
+                </div>
+
+            </div> -->
+
+           
+            <hr class="progress-bar">
         </header>
 
     
         <!--top -->
         <section class="top" id="top">
+            
             <div class="sell-more">
                 <h1 class="title">Sell More!</h1>
                 <h5 class="sub-title">Open shop in our platform and increase your sales</h5> 
@@ -110,17 +122,20 @@
 
             <h2>Pricing</h2>
 
-            <select name="currency" id="currency">
-                <option value="usd">USD</option>
-                <option value="eur">EUR</option>
-                <option value="gbp">GBP</option>
+            <select name="selector" id="selector">
+                <option value="usd" id="usd">USD</option>
+                <option value="eur" id="eur">EUR</option>
+                <option value="gbp" id="gbp">GBP</option>
+                <label>Currency</label>
             </select>
 
             <div id="pricing-options">
                 <div class="basic-price-option">
                     <div class="option-header">
                         <h3>Basic</h3>
-                        <h2 id="price-basic-price-option">$0</h2>
+                        <h2 id="basic-price" class="price" id="price-basic-price-option">
+                            $0
+                        </h2>
                         
                         
                     </div>
@@ -140,7 +155,7 @@
                 <div class="pro-price-option">
                     <div class="option-header">
                         <h3>Professional</h3>
-                        <h2>$25</h2>
+                        <h2 id="pro-price" class="price">$25</h2>
                         <p>Limited offer</p>
                     </div>
                     
@@ -158,7 +173,9 @@
                 <div class="premium-price-option">
                     <div class="option-header">
                         <h3>Premium</h3>
-                        <h2>$60</h2>
+                        <h2 id="premium-price" class="price" >
+                            $60
+                        </h2>
                         <p>Limited offer</p>
                     </div>
                     <div class="option-services">
@@ -237,6 +254,8 @@
 
         </section>
 
+        <button class="return-button"><img class="return-button-img" src="img/arrow-down.svg"></button>
+
         <footer class="footer">
             <div class="footer-logo">
                 <h2>OXYGEN Shop</h2>
@@ -249,7 +268,10 @@
             </div>
 
         </footer>
-        <script src="script.js"></script>
+        
+        <script src="script.js" type="text/javascript">
+            
+        </script>
     </body>
     
 </html>
