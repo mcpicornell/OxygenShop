@@ -46,9 +46,9 @@
 
 
     #header{
-      height: 12%;
+      height: 75px;
       width: 100%;
-      z-index: 5;
+      z-index: 6;
       position: fixed;
       background-color:white;
       border-bottom: 3px inset rgb(241, 240, 240);
@@ -217,6 +217,12 @@
   }
 
   /*Cards*/
+
+  .benefits{
+    background: #F7F7F7;
+  padding: 5%, 5%, 5%, 0;
+  margin-bottom: 5%;
+  }
 
   .card-container{
     display: flex;
@@ -719,6 +725,11 @@
   input[type=checkbox] {
     height: 24px;
     width: 24px;
+  }
+
+  .input-error {
+    border-color: #fa1e4e;
+    
   }
 
   label {

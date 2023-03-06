@@ -223,15 +223,15 @@
             </div>
 
             <div class="form">
-                <form action="">
-                    <label for="name">NAME</label><br>
-                    <input id="name" name="name" type="text"><br><br>
-                    <label for="email">EMAIL</label><br>
-                    <input id="email" name="email" type="email">
+                <form action="" class="superForm">
+                    <label for="name">NAME</label required><br>
+                    <input id="name" name="name" type="text" min="2" maxlength="50" required /><br><br>
+                    <label for="email" >EMAIL</label><br>
+                    <input id="email" name="email" type="email" required/>
 
                     <div class="check">
                         <div class="tick">
-                            <input id="consent" name="consent" type="checkbox">
+                            <input id="consent" name="consent" type="checkbox" required>
                         </div>
                         <div class="check-text">
                             <label for="consent">
@@ -239,7 +239,7 @@
                             </label>
                         </div>
                     </div>
-                    <button class="btn-form">Send</button>
+                    <button class="send"  type="submit">Send</button>
                 </form>
             </div>
 

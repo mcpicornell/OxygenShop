@@ -75,40 +75,60 @@ actualSelection.addEventListener("change", async() => {
 
 //Get and post Client form data
 
-const postClientForm = document.addEventListener("submit", async () => {
-    const name = document.getElementById("name").value;
-    const email = document.getElementById("email").value;
+const form = document.querySelector(".send");
+
+form.addEventListener("submit",async (event) => {
+    event.preventDefault();
+    const name = document.getElementById("name");
+    const email = document.getElementById("email");
+
+    const check = document.getElementById("consent");
 
     let client = {
-        name: name,
-        email: email
+        name: name.value,
+        email: email.value
     }
-    try{
-        const response = await fetch('https://jsonplaceholder.typicode.com/users/1/posts', {
-            method: 'POST',
-            headers: {
-                "Content-Type": "application/json"
-        },
-        body: JSON.stringify(client)
-    });
 
-        if(response.ok){
-        const data = await response.json();
-        console.log(data);
+    if (!REGEXP_NAME.test(name.value)) {
+        name.classList.add("input-error");
+    } else {
+        name.classList.remove("input-error");
+    }
+    if (!REGEXP_EMAIL.test(email.value)) {
+        email.classList.add("input-error");
+    } else {
+        email.classList.remove("input-error");
+    }
+
+    console.log("soy el primer listener")
+    if (REGEXP_NAME.test(name.value) && REGEXP_EMAIL.test(email.value) && check.checked) {
+
+        try{
+            const response = await fetch('https://jsonplaceholder.typicode.com/users/1/posts', {
+                method: 'POST',
+                headers: {
+                    "Content-Type": "application/json"
+            },
+            body: JSON.stringify(client)
+        })
+            if(response.ok){
+            const data = await response.json();
+            console.log(data);
+            }
+    
+            else{
+                console.log("I have a bad feeling about this...")
+            }
+            console.log('I am in')
         }
-
-        else{
-            console.log("I have a bad feeling about this...")
+        catch(error){
+                console.log(error);
         }
+        console.log("soy el segundo listener")
+            
+}});
+    
 
-    }
-    catch(error){
-        console.log(error);
-    }
-
-});
-
-postClientForm();
 
 /*Return Button*/
 const returnBtn = document.querySelector(".return-button").addEventListener("click", () => {
@@ -119,3 +139,43 @@ const returnBtn = document.querySelector(".return-button").addEventListener("cli
         })
     }, 200);
 });
+
+
+
+/*Envia los datos del formulario a un servidor*/
+// form.addEventListener("click", () => {
+//     let name = document.querySelector("#name");
+//     let email = document.querySelector("#email");
+//     let check = document.querySelector("#consent");
+
+//     if (!REGEXP_NAME.test(name.value)) {
+//         name.classList.add("input-error");
+//     } else {
+//         name.classList.remove("input-error");
+//     }
+//     if (!REGEXP_EMAIL.test(email.value)) {
+//         email.classList.add("input-error");
+//     } else {
+//         email.classList.remove("input-error");
+//     }
+
+//     if (REGEXP_NAME.test(name.value) && REGEXP_EMAIL.test(email.value) && check.checked) {
+//         sendForm.submit(name.value, email.value, "https://jsonplaceholder.typicode.com/users/1/posts");
+//     }
+// });
+
+
+// /*Envia al servidor el email y nombre de contacto*/
+// async function sendForm(name, email, url) {
+//     await fetch(url, {
+//         method: "POST",
+//         body: JSON.stringify({
+//             name: name,
+//             email: email
+//         }),
+//         headers: {
+//             'Content-type': 'application/json; charset=UTF-8',
+//         },
+//     })
+//         .then((response) => response.json());
+// }
