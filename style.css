@@ -99,13 +99,13 @@
     font-size: 0.8rem;
   }
 
-  .burger {
-    font-size: 1.2em;
-    display: none;
+.burger {
+  font-size: 1.2em;
+  display: none;
 }
 
 .progress-bar {
-  top: 76px;
+  top: 70px;
   border: 4px solid;
   border-image-slice: 1;
   z-index: 10;
@@ -131,15 +131,16 @@
     margin-block-end: 0.67em;
     margin-inline-start: 0px;
     margin-inline-end: 0px;
-    font-family: "Comic Sans";
-    font-weight: 1200;
-    font-size: 35px;
+    font-family: "Ralleway";
+    font-weight: 400;
+    font-size: 32px;
   }
 
   .sub-title{
     font-family: "Open Sans";
     font-size: 18px;
     opacity: 0.9;
+    font-weight: 400;
   }
 
   .shop-btn-container{
@@ -147,7 +148,7 @@
   }
 
   .shop-btn {
-    margin-top: -300px;
+    margin-top: -250px;
     padding-top: -300px;
     appearance: auto;
     writing-mode: horizontal-tb !important;
@@ -167,7 +168,7 @@
     font-style: normal;
     font-size: 1.8rem;
     line-height: 200%;
-    width: 60%;
+    width: 40%;
     height: 12%;
     color: #FFFFFF;
     background-color: #08A6E4;
@@ -197,6 +198,12 @@
     
   }
 
+  .popular-sales h2{
+    font-family: "Ralleway";
+    font-size: 32px;
+    font-weight: 300;
+  }
+
   .popular-img-container{
     display: flex;
     flex-direction: row;
@@ -216,6 +223,7 @@
     flex-direction: column;
     justify-items: center;
     margin-right: 5%;
+    
   }
 
   .card1{
@@ -343,7 +351,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    background-color: #FFFFFF;
+    
     
   }
 
@@ -351,7 +359,18 @@
     font-family: "Raleway";
     font-weight: 400;
     font-size: 36px;
+    
   }
+
+  
+
+  #selector{
+    z-index: 5;
+    margin: 2%;
+    width: 75px;
+    height: 30px;
+  }
+
 
   #pricing-options {
     padding-top: 2%;
@@ -886,15 +905,16 @@
     margin-block-end: 0.67em;
     margin-inline-start: 0px;
     margin-inline-end: 0px;
-    font-family: "Comic Sans";
-    font-weight: 800;
-    font-size: 35px;
+    font-family: "Ralleway";
+    font-weight: 400;
+    font-size: 32px;
   }
 
   h5.sub-title{
     font-family: "Open Sans";
     font-size: 15px;
     opacity: 0.9;
+    font-weight: 400;
     margin: 15%, 0%, 5%, 50%;
   }
 
@@ -1120,6 +1140,8 @@
     font-size: 36px;
   }
 
+
+
   div#pricing-options {
     flex-direction: column;
     text-align: center;
@@ -1220,7 +1242,7 @@
   }
 
   .pro-price-option {
-    margin-top: 10px;
+    margin-top: 15px;
     margin-right: 3%;
     
     margin-bottom: 40px;

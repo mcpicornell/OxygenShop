@@ -73,7 +73,44 @@ actualSelection.addEventListener("change", async() => {
     
 });
 
-/*Vuelve al inicio de la pagina al pulsar el boton*/
+//Get and post Client form data
+
+const postClientForm = document.addEventListener("submit", async () => {
+    const name = document.getElementById("name").value;
+    const email = document.getElementById("email").value;
+
+    let client = {
+        name: name,
+        email: email
+    }
+    try{
+        const response = await fetch('https://jsonplaceholder.typicode.com/users/1/posts', {
+            method: 'POST',
+            headers: {
+                "Content-Type": "application/json"
+        },
+        body: JSON.stringify(client)
+    });
+
+        if(response.ok){
+        const data = await response.json();
+        console.log(data);
+        }
+
+        else{
+            console.log("I have a bad feeling about this...")
+        }
+
+    }
+    catch(error){
+        console.log(error);
+    }
+
+});
+
+postClientForm();
+
+/*Return Button*/
 const returnBtn = document.querySelector(".return-button").addEventListener("click", () => {
     setTimeout(() => {
         window.scroll({
