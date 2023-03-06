@@ -179,3 +179,70 @@ const returnBtn = document.querySelector(".return-button").addEventListener("cli
 //     })
 //         .then((response) => response.json());
 // }
+
+function modalFormValidator(nombre, email, checkbox) {
+    let validator = true;
+    if (nombre.length < 2 || nombre.length > 100) {
+        validator = false;
+        document.getElementById("modalName").placeholder = "Wrong name (2-50 caracteres)";
+        document.getElementById("modalName").classList.add("error-form");
+        document.getElementById("modalName").value = "";
+
+    }
+
+    else if (email.test() === false) {
+        validator = false;
+        document.getElementById("modalEmail").placeholder = "Wrong email address";
+        document.getElementById("modalEmail").classList.add("error-form");
+        document.getElementById("modalEmail").value = "";
+    }
+    else if (checkbox === false) {
+        validator = false;
+        document.getElementById("modal-terminos").classList.add("error-form-text");
+    }
+    return validator;
+}
+
+//MODAL
+window.sessionStorage.setItem("modalAlreadyShown", "false");
+console.log(sessionStorage)
+
+window.addEventListener("scroll", function () {
+    let winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+    let height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+    let scrolled = (winScroll / height) * 100;
+
+    if (window.sessionStorage.getItem("modalAlreadyShown") === "false") {
+        if (scrolled > 25) {
+            document.getElementById("modal").showModal();
+            window.sessionStorage.setItem("modalAlreadyShown", "true");
+        }
+    }
+})
+
+
+setTimeout(function modalController() {
+    if (window.sessionStorage.getItem("modalAlreadyShown") === "false") {
+        document.getElementById("modal").showModal();
+        window.sessionStorage.setItem("modalAlreadyShown", "true");
+    }
+}, 5000);
+
+
+window.addEventListener("keypress", function(event){
+    if(event.key === 'ESC'){
+        document.getElementById("modal").close();
+    }
+})
+
+document.getElementById("modalform-close").addEventListener('click', function(event){    
+    document.getElementById("modal").close();
+    }
+)
+
+window.addEventListener("click", function(event){
+    let elemento = document.getElementById("modal");
+    if(!elemento.contains(event.target)){
+        elemento.close();
+    }
+})
