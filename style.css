@@ -797,6 +797,8 @@
 /* Modal form */
 
 #modalform-close {
+  position: absolute;
+
   width: 30px;
   height: 30px;
   border-radius: 50%;
@@ -805,6 +807,8 @@
   color: transparent;
   background: #08A6E4;
   font-size: 1rem;
+  top: 20px;
+  right: 25px;
   -webkit-background-clip: text;
           background-clip: text;
 }
@@ -865,9 +869,14 @@
 }
 
 #modal-terms{
-  padding: 5%;
   margin: 10%;
   width: 100px;
+}
+
+#checkbox{
+  position: absolute;
+  left: 35.5%;
+  bottom: 30.5%;
 }
 
 .modalform-button {
