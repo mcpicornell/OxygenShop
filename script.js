@@ -87,7 +87,7 @@ form.addEventListener("submit",async (event) => {
     let client = {
         name: name.value,
         email: email.value
-    }
+    };
 
     if (!REGEXP_NAME.test(name.value)) {
         name.classList.add("input-error");
@@ -180,6 +180,9 @@ const returnBtn = document.querySelector(".return-button").addEventListener("cli
 //         .then((response) => response.json());
 // }
 
+
+//Modal Form
+
 function modalFormValidator(nombre, email, checkbox) {
     let validator = true;
     if (nombre.length < 2 || nombre.length > 100) {
@@ -187,7 +190,6 @@ function modalFormValidator(nombre, email, checkbox) {
         document.getElementById("modalName").placeholder = "Wrong name (2-50 caracteres)";
         document.getElementById("modalName").classList.add("error-form");
         document.getElementById("modalName").value = "";
-
     }
 
     else if (email.test() === false) {
@@ -201,9 +203,8 @@ function modalFormValidator(nombre, email, checkbox) {
         document.getElementById("modal-terminos").classList.add("error-form-text");
     }
     return validator;
-}
+};
 
-//MODAL
 window.sessionStorage.setItem("modalAlreadyShown", "false");
 console.log(sessionStorage)
 
@@ -218,7 +219,7 @@ window.addEventListener("scroll", function () {
             window.sessionStorage.setItem("modalAlreadyShown", "true");
         }
     }
-})
+});
 
 
 setTimeout(function modalController() {
@@ -233,16 +234,16 @@ window.addEventListener("keypress", function(event){
     if(event.key === 'ESC'){
         document.getElementById("modal").close();
     }
-})
+});
 
 document.getElementById("modalform-close").addEventListener('click', function(event){    
     document.getElementById("modal").close();
     }
-)
+);
 
 window.addEventListener("click", function(event){
     let elemento = document.getElementById("modal");
     if(!elemento.contains(event.target)){
         elemento.close();
     }
-})
+});
