@@ -1208,7 +1208,7 @@
 
   .card3{
     display: flex;
-    flex-direction: column;
+    flex-direction: column-reverse;
     border-radius: 40px;
     height: fit-content;
     width: fit-content;
