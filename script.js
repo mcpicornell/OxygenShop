@@ -75,33 +75,39 @@ actualSelection.addEventListener("change", async() => {
 
 //Get and post Client form data
 
-const form = document.querySelector(".send");
+const btnForm = document.getElementById("sendBtn");
 
-form.addEventListener("submit",async (event) => {
+const regexpName = /^.{2,100}$/;
+const regexpEmail = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+
+btnForm.addEventListener("click",async (event) => {
     event.preventDefault();
     const name = document.getElementById("name");
     const email = document.getElementById("email");
 
     const check = document.getElementById("consent");
 
+    console.log("todo ok de momento")
+
     let client = {
         name: name.value,
         email: email.value
-    };
+    }
 
-    if (!REGEXP_NAME.test(name.value)) {
+    if (!regexpName.test(name.value)) {
         name.classList.add("input-error");
     } else {
         name.classList.remove("input-error");
     }
-    if (!REGEXP_EMAIL.test(email.value)) {
+    if (!regexpEmail.test(email.value)) {
         email.classList.add("input-error");
     } else {
         email.classList.remove("input-error");
     }
 
-    console.log("soy el primer listener")
-    if (REGEXP_NAME.test(name.value) && REGEXP_EMAIL.test(email.value) && check.checked) {
+    console.log("soy el primer listener");
+
+    if (regexpName.test(name.value) && regexpEmail.test(email.value) && check.checked) {
 
         try{
             const response = await fetch('https://jsonplaceholder.typicode.com/users/1/posts', {
@@ -131,54 +137,54 @@ form.addEventListener("submit",async (event) => {
 
 
 /*Return Button*/
-const returnBtn = document.querySelector(".return-button").addEventListener("click", () => {
-    setTimeout(() => {
-        window.scroll({
-            top: 0,
-            behavior: "smooth",
-        })
-    }, 200);
-});
+// const returnBtn = document.querySelector(".send").addEventListener("click", () => {
+//     setTimeout(() => {
+//         window.scroll({
+//             top: 0,
+//             behavior: "smooth",
+//         })
+//     }, 200);
+// });
 
 
 
-/*Envia los datos del formulario a un servidor*/
+// /*Envia los datos del formulario a un servidor*/
 // form.addEventListener("click", () => {
 //     let name = document.querySelector("#name");
 //     let email = document.querySelector("#email");
 //     let check = document.querySelector("#consent");
 
-//     if (!REGEXP_NAME.test(name.value)) {
+//     if (!regexpName.test(name.value)) {
 //         name.classList.add("input-error");
 //     } else {
 //         name.classList.remove("input-error");
 //     }
-//     if (!REGEXP_EMAIL.test(email.value)) {
+//     if (!regexpEmail.test(email.value)) {
 //         email.classList.add("input-error");
 //     } else {
 //         email.classList.remove("input-error");
 //     }
 
-//     if (REGEXP_NAME.test(name.value) && REGEXP_EMAIL.test(email.value) && check.checked) {
+//     if (regexpName.test(name.value) && regexpEmail.test(email.value) && check.checked) {
 //         sendForm.submit(name.value, email.value, "https://jsonplaceholder.typicode.com/users/1/posts");
 //     }
 // });
 
 
 // /*Envia al servidor el email y nombre de contacto*/
-// async function sendForm(name, email, url) {
-//     await fetch(url, {
-//         method: "POST",
-//         body: JSON.stringify({
-//             name: name,
-//             email: email
-//         }),
-//         headers: {
-//             'Content-type': 'application/json; charset=UTF-8',
-//         },
-//     })
-//         .then((response) => response.json());
-// }
+async function sendForm(name, email, url) {
+    await fetch(url, {
+        method: "POST",
+        body: JSON.stringify({
+            name: name,
+            email: email
+        }),
+        headers: {
+            'Content-type': 'application/json; charset=UTF-8',
+        },
+    })
+        .then((response) => response.json());
+}
 
 
 //Modal Form
@@ -203,7 +209,7 @@ function modalFormValidator(nombre, email, checkbox) {
         document.getElementById("modal-terminos").classList.add("error-form-text");
     }
     return validator;
-};
+}
 
 window.sessionStorage.setItem("modalAlreadyShown", "false");
 console.log(sessionStorage)
