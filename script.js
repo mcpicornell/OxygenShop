@@ -87,8 +87,6 @@ btnForm.addEventListener("click",async (event) => {
 
     const check = document.getElementById("consent");
 
-    console.log("todo ok de momento")
-
     let client = {
         name: name.value,
         email: email.value
@@ -104,8 +102,6 @@ btnForm.addEventListener("click",async (event) => {
     } else {
         email.classList.remove("input-error");
     }
-
-    console.log("soy el primer listener");
 
     if (regexpName.test(name.value) && regexpEmail.test(email.value) && check.checked) {
 
@@ -129,63 +125,10 @@ btnForm.addEventListener("click",async (event) => {
         }
         catch(error){
                 console.log(error);
-        }
-        console.log("soy el segundo listener")
-            
-}});
+        }    
+    }
+});
     
-
-
-/*Return Button*/
-// const returnBtn = document.querySelector(".send").addEventListener("click", () => {
-//     setTimeout(() => {
-//         window.scroll({
-//             top: 0,
-//             behavior: "smooth",
-//         })
-//     }, 200);
-// });
-
-
-
-// /*Envia los datos del formulario a un servidor*/
-// form.addEventListener("click", () => {
-//     let name = document.querySelector("#name");
-//     let email = document.querySelector("#email");
-//     let check = document.querySelector("#consent");
-
-//     if (!regexpName.test(name.value)) {
-//         name.classList.add("input-error");
-//     } else {
-//         name.classList.remove("input-error");
-//     }
-//     if (!regexpEmail.test(email.value)) {
-//         email.classList.add("input-error");
-//     } else {
-//         email.classList.remove("input-error");
-//     }
-
-//     if (regexpName.test(name.value) && regexpEmail.test(email.value) && check.checked) {
-//         sendForm.submit(name.value, email.value, "https://jsonplaceholder.typicode.com/users/1/posts");
-//     }
-// });
-
-
-// /*Envia al servidor el email y nombre de contacto*/
-async function sendForm(name, email, url) {
-    await fetch(url, {
-        method: "POST",
-        body: JSON.stringify({
-            name: name,
-            email: email
-        }),
-        headers: {
-            'Content-type': 'application/json; charset=UTF-8',
-        },
-    })
-        .then((response) => response.json());
-}
-
 
 //Modal Form
 
@@ -212,7 +155,6 @@ function modalFormValidator(nombre, email, checkbox) {
 }
 
 window.sessionStorage.setItem("modalAlreadyShown", "false");
-console.log(sessionStorage)
 
 window.addEventListener("scroll", function () {
     let winScroll = document.body.scrollTop || document.documentElement.scrollTop;
@@ -252,4 +194,15 @@ window.addEventListener("click", function(event){
     if(!elemento.contains(event.target)){
         elemento.close();
     }
+});
+
+
+/*Return Button*/
+const returnBtn = document.querySelector(".return-button").addEventListener("click", () => {
+    setTimeout(() => {
+        window.scroll({
+            top: 0,
+            behavior: "smooth",
+        })
+    }, 200);
 });

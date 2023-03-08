@@ -6,7 +6,6 @@
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link href=" https://mangatschool.com/topic/menu-responsive-html-css-con-codigo/" rel="stylesheet"/>
         <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"/>
     
     <script src="https://kit.fontawesome.com/fef5116784.js" crossorigin="anonymous"></script>
@@ -73,7 +72,7 @@
                     <div class="card1-img">
                         <img class="card1-imgs" src="img/completo/laptopCompleto.png" alt="laptop"/>
                     </div>
-                    <div class="card1-text">
+                    <div class="card1-text" class="all-cards-text">
                         <h3>Be always first!</h3>
                         <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Repellat voluptate, soluta eaque, tenetur voluptatem, magnam corporis maiores possimus harum assumenda dolor ad alias minus! Sed fugiat quia similique ipsa excepturi!</p>
                         <hr class="card1-line">
@@ -86,7 +85,7 @@
                     <div class="card2-img">
                         <img class="card2-imgs" src="img/completo/iphoneCompleto.png" alt="iphone"/>
                     </div>
-                    <div class="card2-text">
+                    <div class="card2-text" class="all-cards-text">
                         <h3>Your shop is where you are!</h3>
                         <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Repellat voluptate, soluta eaque, tenetur voluptatem, magnam corporis maiores possimus harum assumenda dolor ad alias minus! Sed fugiat quia similique ipsa excepturi!</p>
                         <hr class="card2-line">
@@ -96,9 +95,9 @@
                 </div>
                 <div class="card3">
                     <div class="card3-img">
-                        <img class="card3-imgs" src="img/completo/tumpetCompleto2.png" height="150px" alt="tumpet"/>
+                        <img class="card3-imgs" src="img/completo/trumpletCompleto.png" height="150px" alt="tumpet"/>
                     </div>
-                    <div class="card3-text">
+                    <div class="card3-text" class="all-cards-text">
                         <h3>Increase recognition your brand!</h3>
                         <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Repellat voluptate, soluta eaque, tenetur voluptatem, magnam corporis maiores possimus harum assumenda dolor ad alias minus! Sed fugiat quia similique ipsa excepturi!</p>
                         <hr class="card3-line"/>
@@ -218,25 +217,27 @@
                 <h2>Any questions?</h2>
                 <span>Leave your email or call us!</span>
                 <div class="info-icons">
-                    <img src="img/mail.svg" alt="email icon"/><span>info@bestshop.xyz</span>
-                    <img src="img/phone.svg"  alt="phone icon"/><span>123 456 789</span>
+                    <img id="iconEmail" src="img/mail.svg" alt="email icon"/><span>info@bestshop.xyz</span>
+                    <img id="iconPhone" src="img/phone.svg"  alt="phone icon"/><span>123 456 789</span>
                 </div>
             </div>
 
             <div class="form">
                 <form action="" class="superForm">
-                    <label for="name">NAME</label required><br>
-                    <input id="name" name="name" type="text" required /><br><br>
-                    <label for="email" >EMAIL</label><br>
-                    <input id="email" name="email" type="email" required/>
+                    <div class="form-content">
+                        <label for="name" class="nameAndEmailText">NAME</label required><br>
+                        <input id="name" name="name" type="text" required /><br><br>
+                        <label for="email"  class="nameAndEmailText">EMAIL</label><br>
+                        <input id="email" name="email" type="email" required/>
+                    </div>
 
                     <div class="check">
                         <div class="tick">
                             <input id="consent" name="consent" type="checkbox" required>
                         </div>
                         <div class="check-text">
-                            <label for="consent">
-                                <span>I hereby give consent for my personal data included in my application to be processed for the purposes of the recruitment process under the European Parliament’s and Council of the European Union Regulation on the Protection of Natural Persons as of 27 April 2016, with regard to the processing of personal data and on the free movement of such data, and repealing Directive 95/46/EC (Data Protection Directive)</span>
+                            <label for="consent" class="conditions-text">
+                                <span id="conditions-text">I hereby give consent for my personal data included in my application to be processed for the purposes of the recruitment process under the European Parliament’s and Council of the European Union Regulation on the Protection of Natural Persons as of 27 April 2016, with regard to the processing of personal data and on the free movement of such data, and repealing Directive 95/46/EC (Data Protection Directive)</span>
                             </label>
                         </div>
                     </div>
