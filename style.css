@@ -1070,9 +1070,6 @@
     width: 100%;
     flex-direction: column;
     background-color: white;
-    /* border-radius: 5%;
-    border: 2px inset #95989A; */
-  
   }
 
   .navigation-li {
@@ -1278,17 +1275,20 @@
     width: fit-content;
     margin-left: 8%;
     margin-bottom: 5%;
+    box-sizing: border-box;
   }
 
   .card3-text{
     padding: 10% 10% 10% 10%;
     font-size: 18px;
     width: 80%;
+    
 
   }
 
   .card3-text h3{
     padding-bottom: 2%;
+    width: 80px;
   }
 
   .card3-text p{
@@ -1299,10 +1299,13 @@
 
   .card3-img{
     margin-bottom: 5%;
+    width: 101%;
   }
 
   img.card2-imgs{
     height: 200px;
+    
+
   }
 
   /*Pricing*/
@@ -1712,5 +1715,128 @@
     margin-right: -10%;
     margin-left: 5%;
   }
+
+  
+/* Modal form */
+
+#modalform-close {
+  position: absolute;
+
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  border-color: #00ffe9;
+  border: solid 1px;
+  color: transparent;
+  background: #08A6E4;
+  font-size: 1rem;
+  top: 5px;
+  right: 5px;
+  -webkit-background-clip: text;
+          background-clip: text;
+}
+
+#modalform-close i:hover {
+  scale: 140%;
+  box-shadow: 10px 25px 27px #068ddb;
+  color: #08A6E4;
+  opacity: 40%;
+}
+
+#modalform-close:focus-visible {
+  outline: none;
+}
+
+#modal {
+  width: 80%;
+  position: relative;
+  margin: auto;
+  justify-content: center;
+  padding: 4%;
+  box-shadow: 10px 25px 27px #a5a5a5;
+  border-radius: 20px;
+  max-width: 800px;
+  Overflow: hidden;
+}
+
+#labelInputs, label{
+  margin-top: 2%;
+}
+
+#nameLabel{
+  margin-left: 14%;
+  margin-bottom: 2%;;
+}
+
+#emailLabel{
+  margin-left: 10%;
+  margin-bottom: 2%;;
+}
+
+
+#nameInput{
+  margin-top: 2%;
+  margin-bottom: 2%;
+}
+
+#emailInput{
+  margin-top: 2%;
+  margin-bottom: 3%;
+}
+
+#modal h2 {
+  font-family: "Raleway";
+  margin-top: 2%;
+
+  font-style: normal;
+  font-weight: 400;
+  font-size: 120%;
+  line-height: 40px;
+  color:  #08A6E4;
+ 
+}
+
+#modal-terms{
+  position: relative;
+  margin: 0;
+}
+
+#checkbox {
+  position: relative;
+ z-index: 0;
+  margin-top: 1%;
+  margin-right: 1%;
+  padding-bottom: 5%;
+  top: 6px;
+}
+
+.modalform-button {
+  font-family: "Open Sans";
+  margin-top: 2%;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 0.813rem;
+  line-height: 18px;
+  color: #FFFFFF;
+  background:  #08A6E4;
+  border: none;
+  box-shadow: 5px 10px 14px #068ddb;
+  border-radius: 20px;
+  margin-top: 5%;
+  margin-left: 5%;
+  margin-right: 5%;
+  width: 150px;
+  height: 30px;
+}
+
+.modalform-button:hover {
+  scale: 120%;
+  opacity: 0.8;
+}
+
+#modal::backdrop {
+  width: -moz-fit-content;
+  width: fit-content;
+}
 
 }
