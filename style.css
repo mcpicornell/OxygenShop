@@ -840,8 +840,8 @@
 
 .return-button {
   position: fixed;
-  bottom: 2%;
-  right: 10%;
+  bottom: 4%;
+  right: 3%;
   width: 50px;
   background-color: transparent;
   border: 0;
@@ -892,7 +892,8 @@
 
 #modalform-close {
   position: absolute;
-
+  font-size: 400;
+  font-family: "Open Sans";
   width: 30px;
   height: 30px;
   border-radius: 50%;
@@ -924,10 +925,14 @@
   margin: auto;
   justify-content: center;
   padding: 4%;
-  box-shadow: 10px 25px 27px #a5a5a5;
+  box-shadow: 10px 10px 10px #0ea5ca;
+  border: 2px solid rgb(7, 141, 146);
   border-radius: 20px;
   max-width: 800px;
   Overflow: hidden;
+  font-size: 16px;
+  font-weight: 600;
+  font-family: "Open Sans";
 }
 
 #labelInputs, label{
@@ -937,11 +942,14 @@
 #nameLabel{
   margin-left: -3%;
   margin-bottom: 2%;;
+  color:rgb(8, 166, 228);
+
 }
 
 #emailLabel{
   margin-left: -2.5%;
   margin-bottom: 2%;
+  color:rgb(8, 166, 228);
 }
 
 #nameInput{
@@ -1720,6 +1728,12 @@
   .social-media{
     margin-right: -10%;
     margin-left: 5%;
+  }
+
+  /* Return Button */
+
+  .return-button{
+    bottom: 10%;
   }
 
   
