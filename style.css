@@ -165,7 +165,7 @@
     margin-block-end: 0.67em;
     margin-inline-start: 0px;
     margin-inline-end: 0px;
-    font-family: "Ralleway";
+    font-family: "Raleway";
     font-weight: 400;
     font-size: 49px;
     line-height: 57px;
@@ -231,7 +231,7 @@
   }
 
   .popular-sales h2{
-    font-family: "Ralleway";
+    font-family: "Raleway";
     font-size: 36px;
     font-weight: 400;
     text-align: center;
@@ -545,8 +545,6 @@
   .basic-price-option button {
 
     background-color: #FB3B64;
-    
-    
   }
 
   .pro-price-option {
@@ -949,7 +947,7 @@
 
 #modal {
   width: 80%;
-  position: relative;
+  position: fixed;
   margin: auto;
   justify-content: center;
   padding: 4%;
