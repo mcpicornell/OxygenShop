@@ -14,21 +14,6 @@ burger.addEventListener('click', function() {
     toggleNav();
 });
 
-// Scrollbar
-window.onscroll = function onScroll(){
-    let pixelsFromTop = window.scrollY;
-
-    let documentHeight = document.body.clientHeight;
-
-    let windowHeight = window.innerHeight;
-
-    let difference = documentHeight - windowHeight;
-
-    let percentage = (pixelsFromTop *100) / difference;
-
-    document.querySelector(".progress-bar").style.width = `${percentage}%`;
-}
-
 
 // DOM to change the current value in the pricing section
 
@@ -198,11 +183,49 @@ window.addEventListener("click", function(event){
 
 
 /*Return Button*/
+
+
+
+
 const returnBtn = document.querySelector(".return-button").addEventListener("click", () => {
-    setTimeout(() => {
-        window.scroll({
-            top: 0,
-            behavior: "smooth",
-        })
-    }, 200);
-});
+
+        setTimeout(() => {
+            window.scroll({
+                top: 0,
+                behavior: "smooth",
+            })
+        }, 200);
+        
+    });
+
+    window.addEventListener("scroll", () => {
+        let winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+        let height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+        let scrolled = (winScroll / height) * 100;
+        if (scrolled > 50) {
+            document.getElementById("return-button").style.visibility = "visible";
+        }
+    
+        else if (scrolled < 50) {
+            document.getElementById("return-button").style.visibility = "hidden";
+        }
+    })
+
+    // Scrollbar
+
+
+window.onscroll = function onScroll(){
+    let pixelsFromTop = window.scrollY;
+
+    let documentHeight = document.body.clientHeight;
+
+    let windowHeight = window.innerHeight;
+
+    let difference = documentHeight - windowHeight;
+
+    let percentage = (pixelsFromTop *100) / difference;
+
+    document.querySelector(".progress-bar").style.width = `${percentage}%`;
+}
+
+
