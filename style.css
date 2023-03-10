@@ -1110,6 +1110,12 @@
     
   }
 
+  .navigation-li a:hover {
+    z-index: 3;
+    text-decoration: underline 3px solid #08A6E4;
+    text-underline-offset: 3px;
+  }
+
   .navigation-li a{
     color: black;
   
