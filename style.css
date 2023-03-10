@@ -32,11 +32,6 @@
     margin: 0;
     padding: 0;
   }
-
- 
-
-
-  
   
   body {
       background-color: #FFFFFF;
@@ -115,8 +110,9 @@
   }
 
   .navigation-li a:hover {
-    border-bottom: 3px solid #08A6E4;
     z-index: 3;
+    text-decoration: underline 3px solid #08A6E4;
+    text-underline-offset: 30px;
   }
 
   .navigation-li a{
@@ -733,9 +729,6 @@
     bottom: -1px;
   }
 
-  
-
-
   .form {
     display: flex;
     flex-direction: row;
@@ -819,7 +812,7 @@
   }
 
   .nameAndEmailText{
-    margin:0 !important;
+    margin:0;
     text-align: left;
   }
 
@@ -1104,6 +1097,7 @@
   }
 
   .navigation-li {
+    text-align: left;
     list-style: none;
     font-size: 12px;
     padding: 3%;
@@ -1698,9 +1692,8 @@
     color: #FFFFFF;
     box-shadow: 5px 10px 14px rgba(7, 172, 230, 0.29);
     border: 0;
-    right: 38px;
+    left: 70px;
     bottom: 55px;
-    left: 10px;
   }
 
   .form button:hover{
@@ -1719,11 +1712,18 @@
     padding-right: 2%;
   }
 
+  /* .nameAndEmailText{
+    margin-top: 200px !important;
+    margin-bottom: 20px;
+  }  */
+
   input[type=text] {
     border: none;
     border-bottom: 1px solid #95989A;
     width: 70%;
     margin-right: -10%;
+    margin-top: 20px;
+    margin-bottom: 10px;
 
   }
 
@@ -1732,6 +1732,8 @@
     border-bottom: 1px solid #95989A;
     width: 70%;
     margin-right: -10%;
+    margin-top: 10px;
+    margin-bottom: 20px;
   }
 
   input[type=checkbox] {
