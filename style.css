@@ -514,6 +514,7 @@
     
   }
 
+  
 
   .basic-price-option {
     position: relative; 
@@ -966,14 +967,14 @@
 }
 
 #nameLabel{
-  margin-left: -3%;
+  margin-left: -13%;
   margin-bottom: 2%;;
   color:rgb(8, 166, 228);
 
 }
 
 #emailLabel{
-  margin-left: -2.5%;
+  margin-left: -13%;
   margin-bottom: 2%;
   color:rgb(8, 166, 228);
 }
@@ -1074,7 +1075,7 @@
   #header {
     height: 50px;
     width: 100%;
-    z-index: 5;
+    z-index: 11;
     position: fixed;
     
     border-bottom: 3px inset rgb(241, 240, 240);
@@ -1084,7 +1085,6 @@
   }
 
   img.logo{
-    
     height: 20px;
     margin-left: 25px;
   }
@@ -1225,11 +1225,7 @@
   }
   /*Cards*/
 
-  .card-container{
-    
-    margin-right: 5%;
-  }
-
+ 
   .card1{
     display: flex;
     flex-direction: column;
@@ -1322,7 +1318,7 @@
 
   .card3-text h3{
     padding-bottom: 2%;
-    width: 80px;
+    width: 300px;
   }
 
   .card3-text p{
@@ -1359,27 +1355,21 @@
   }
 
 
-/* 
-  div#pricing-options {
-    flex-direction: column;
-    text-align: center;
-    justify-content: center;
-  } */
-
   #pricing-options {
+    position: relative;
     padding-top: 2%;
     padding-bottom: 10%;
     
-    flex-direction: column;
+     flex-direction: column;
     text-align: center;
-    justify-content: center;
+    justify-content: center; 
     
   }
 
   .option-header{
-    margin-top: 20%;
-    margin-right: 3%;
-    margin-left: 3%;
+    position: absolute;
+    left: 5px;
+    bottom: 85px;
   }
 
   .option-header h3 {
@@ -1427,7 +1417,9 @@
     font-weight: 400;
     font-size: 13px;
     line-height: 19px;
-    padding-top: 10%;
+    padding-top: 12%;
+    padding-left: 45%;
+    padding-right: 1%;
   } 
 
   button.option-button {
@@ -1450,15 +1442,19 @@
     opacity: 0.8;
   }
 
+  #basic-option-header{
+    left: 40px;
+  }
+
 
   .basic-price-option {
+    position: relative;
     display: flex; 
     flex-direction: row;
     justify-content: space-around;
-    align-content: center;
     margin-top: 1%;
     margin-bottom: 30px;
-    width: 100%;
+    width: 102%;
     border-radius: 18px;
     border: 1px solid #FB3B64;
     box-shadow: 5px 10px 27px rgba(7, 172, 230, 0.29);
@@ -1467,12 +1463,14 @@
   }
 
   .basic-price-option h2 {
+    
     color: #FB3B64;
   }
 
   .basic-price-option button {
     background-color: #FB3B64;
   }
+
 
   .pro-price-option {
     display: flex; 
@@ -1482,9 +1480,9 @@
     margin-top: 15px;
     margin-right: 3%;
     height: 70%;
-     margin-bottom: 40px;
+    margin-bottom: 40px;
     padding-bottom: 10px; 
-    width: 100%;
+    width: 102%;
     border-radius: 18px;
     border: 1px solid #07ACE6;
     padding-bottom: 0;
@@ -1501,6 +1499,10 @@
 
   }
 
+  #premium-option-header{
+    left: 20px;
+  }
+
   .premium-price-option {
     display: flex; 
     flex-direction: row;
@@ -1510,7 +1512,7 @@
     
     margin-bottom: 30px;
     padding-bottom: 10px;
-    width: 100%;   
+    width: 102%;   
     height: 70%; 
     border-radius: 18px;
     border: 1px solid #55DFB4;
@@ -1521,6 +1523,7 @@
 
   .premium-price-option h2 {
     color: #55DFB4;
+    
   }
 
   .premium-price-option button {
@@ -1824,7 +1827,7 @@
 
 #modal {
   width: 80%;
-  position: relative;
+  position: fixed;
   margin: auto;
   justify-content: center;
   padding: 4%;
@@ -1839,12 +1842,12 @@
 }
 
 #nameLabel{
-  margin-left: 7%;
+  margin-left: 16%;
   margin-bottom: 2%;;
 }
 
 #emailLabel{
-  margin-left: 8%;
+  margin-left: 16%;
   margin-bottom: 2%;;
 }
 
